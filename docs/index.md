@@ -1,7 +1,7 @@
 --- 
 title: "SIG untuk Perencanaan Tata Ruang dan Lingkungan"
 author: "Dr. Firman Hadi"
-date: "`r Sys.Date()`"
+date: "2019-12-16"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
