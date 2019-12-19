@@ -1,8 +1,8 @@
 # (PART) Studi Kasus : Semarang Urban Growth and Access to Public Infrastructure {-}
 
 
-## Urban Growth
+# Pertumbuhan Wilayah Kota (Urban Growth)
 
-## Access to Public Infrastructure
+# Akses ke Fasilitas Publik 
 
 

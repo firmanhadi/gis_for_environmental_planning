@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bab 1 Pemodelan Sistem Informasi Geografis | SIG untuk Perencanaan Tata Ruang dan Lingkungan</title>
+  <title>Bab 3 Urban Growth | SIG untuk Perencanaan Tata Ruang dan Lingkungan</title>
   <meta name="description" content="Repositori ini berisi materi ajar penggunaan Sistem Informasi Geografis untuk Perencanaan Tata Ruang dan Lingkungan, Program Pascasarjana Ilmu Lingkungan, Universitas Padjadjaran" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bab 1 Pemodelan Sistem Informasi Geografis | SIG untuk Perencanaan Tata Ruang dan Lingkungan" />
+  <meta property="og:title" content="Bab 3 Urban Growth | SIG untuk Perencanaan Tata Ruang dan Lingkungan" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bab 1 Pemodelan Sistem Informasi Geografis | SIG untuk Perencanaan Tata Ruang dan Lingkungan" />
+  <meta name="twitter:title" content="Bab 3 Urban Growth | SIG untuk Perencanaan Tata Ruang dan Lingkungan" />
   
   <meta name="twitter:description" content="Repositori ini berisi materi ajar penggunaan Sistem Informasi Geografis untuk Perencanaan Tata Ruang dan Lingkungan, Program Pascasarjana Ilmu Lingkungan, Universitas Padjadjaran" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="hari-keenam.html"/>
+<link rel="prev" href="hari-keenam.html"/>
+<link rel="next" href="access-to-public-infrastructure.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -105,8 +105,8 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Studi Kasus : Semarang Urban Growth and Access to Public Infrastructure</b></span></li>
-<li class="chapter" data-level="3" data-path="pertumbuhan-wilayah-kota-urban-growth.html"><a href="pertumbuhan-wilayah-kota-urban-growth.html"><i class="fa fa-check"></i><b>3</b> Pertumbuhan Wilayah Kota (Urban Growth)</a></li>
-<li class="chapter" data-level="4" data-path="akses-ke-fasilitas-publik.html"><a href="akses-ke-fasilitas-publik.html"><i class="fa fa-check"></i><b>4</b> Akses ke Fasilitas Publik</a></li>
+<li class="chapter" data-level="3" data-path="urban-growth.html"><a href="urban-growth.html"><i class="fa fa-check"></i><b>3</b> Urban Growth</a></li>
+<li class="chapter" data-level="4" data-path="access-to-public-infrastructure.html"><a href="access-to-public-infrastructure.html"><i class="fa fa-check"></i><b>4</b> Access to Public Infrastructure</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/firmanhadi/gis_for_environmental_planning" target="blank">Published with bookdown</a></li>
 
@@ -127,58 +127,16 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pemodelan-sistem-informasi-geografis" class="section level1">
-<h1><span class="header-section-number">Bab 1</span> Pemodelan Sistem Informasi Geografis</h1>
-<p><strong>Referensi</strong></p>
-<p>“Geographic Information System (GIS) modeling approach to determine the fastest delivery routes”: <a href="https://www.sciencedirect.com/science/article/pii/S1319562X15001370">https://www.sciencedirect.com/science/article/pii/S1319562X15001370</a></p>
-<div id="conceptual-framework" class="section level2">
-<h2><span class="header-section-number">1.1</span> Conceptual framework</h2>
-<p><img src="img/gismodel1.png" /></p>
-</div>
-<div id="data" class="section level2">
-<h2><span class="header-section-number">1.2</span> Data</h2>
-<p><img src="img/gismodel2.png" /></p>
-</div>
-<div id="final-regression-model" class="section level2">
-<h2><span class="header-section-number">1.3</span> Final regression model</h2>
-<p>LTIME = +0.2663 * CARVOLUME + 0.6984 * LLENGTH + 0.0203 * LPOP + 0.0605 * TWOWAY + 0.1681 * SCHOOL + 0.0317 * RESIDENTIAL - 0.5497</p>
-</div>
-<div id="studi-kasus-pemodelan-sig" class="section level2">
-<h2><span class="header-section-number">1.4</span> Studi Kasus : Pemodelan SIG</h2>
-<div id="analisis-wilayah-layanan-service-area-analyses" class="section level3">
-<h3><span class="header-section-number">1.4.1</span> Analisis Wilayah Layanan (Service Area Analyses)</h3>
-<ol style="list-style-type: decimal">
-<li><p>Load layer jalan dan fasilitas kesehatan dalam format UTM (Zona 48N).</p></li>
-<li><p>Load raster kepadatan penduduk</p></li>
-<li><p>Melakukan analisis <strong><em>service area</em></strong></p></li>
-</ol>
-<ul>
-<li>Processing &gt; Network analyses &gt; Service area</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Create buffer from service area lines</p></li>
-<li><p>Calculate raster using vector</p></li>
-</ol>
-<ul>
-<li>Zonal statistics</li>
-</ul>
-</div>
-<div id="menghitung-jumlah-rumah-di-sempadan-sungai" class="section level3">
-<h3><span class="header-section-number">1.4.2</span> Menghitung jumlah rumah di sempadan sungai</h3>
-<p><img src="img/gismodel4.png" /></p>
-<p><img src="img/gismodel6.png" /></p>
-<p><img src="img/gismodel7.png" /></p>
-
-</div>
-</div>
+<div id="urban-growth" class="section level1">
+<h1><span class="header-section-number">Bab 3</span> Urban Growth</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hari-keenam.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="hari-keenam.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="access-to-public-infrastructure.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
