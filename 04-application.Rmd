@@ -1,7 +1,8 @@
-# Applications
+# (PART) Studi Kasus : Semarang Urban Growth and Access to Public Infrastructure {-}
 
-Some _significant_ applications are demonstrated in this chapter.
 
-## Example one
+## Urban Growth
 
-## Example two
+## Access to Public Infrastructure
+
+

@@ -2,7 +2,7 @@ book_filename: "SIGTaruLing"
 chapter_name: "Bab "
 repo: https://github.com/firmanhadi/gis_for_environmental_planning
 output_dir: docs
-rmd_files: ["index.Rmd", "01-intro.Rmd","02-sig.Rmd"]
+rmd_files: ["index.Rmd", "02-GIS.Rmd","03-Analyses.Rmd","04-application.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
 
