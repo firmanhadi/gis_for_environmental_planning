@@ -1,6 +1,6 @@
-# (PART) Sistem Informasi Geografis {-}
+# Sistem Informasi Geografis
 
-# Pemodelan Sistem Informasi Geografis
+## Pemodelan Sistem Informasi Geografis
 
 **Referensi**
 
@@ -8,23 +8,23 @@
 
 
 
-## Conceptual framework
+### Conceptual framework
 
 ![](./img/gismodel1.png) 
 
-## Data
+### Data
 
 ![](./img/gismodel2.png) 
 
 
-## Final regression model
+### Final regression model
 
 
 LTIME = +0.2663 * CARVOLUME + 0.6984 * LLENGTH + 0.0203 * LPOP + 0.0605 * TWOWAY + 0.1681 * SCHOOL + 0.0317 * RESIDENTIAL - 0.5497
 
-## Studi Kasus : Pemodelan SIG 
+### Studi Kasus : Pemodelan SIG 
 
-### Analisis Wilayah Layanan (Service Area Analyses)
+#### Analisis Wilayah Layanan (Service Area Analyses)
 
 1. Load layer jalan dan fasilitas kesehatan dalam format UTM (Zona 48N).
 
@@ -40,7 +40,7 @@ LTIME = +0.2663 * CARVOLUME + 0.6984 * LLENGTH + 0.0203 * LPOP + 0.0605 * TWOWAY
 
 - Zonal statistics
 
-### Menghitung jumlah rumah di sempadan sungai
+#### Menghitung jumlah rumah di sempadan sungai
 
 
 ![](./img/gismodel4.png)

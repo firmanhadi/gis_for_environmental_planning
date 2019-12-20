@@ -1,4 +1,4 @@
-# Analisis Sistem Informasi Geografis {#hari_keenam}
+## Analisis Sistem Informasi Geografis {#hari_keenam}
 
 **Data**
 
@@ -6,7 +6,7 @@ Data dapat diunduh di tautan berikut [https://firmanhadi.github.io/training-for-
 
 Analisis spasial adalah sebuah proses untuk mengkaji lokasi, atribut dan hubungan antara fitur dari data spasial melalui cara overlay dan teknik analisis lainnya, dalam rangka menjawab pertanyaan atau mendapatkan pemahaman yang bermanfaat. Analisis spasial mengekstrak atau membuat informasi baru dari data spasial.
 
-## Basic Geoprocessing
+### Basic Geoprocessing
 
 Geoprocessing adalah operasi SIG untuk memanipulasi data. Operasi geoprocessing membutuhkan input, melakukan operasi tertentu pada data tersebut dan memberikan hasil dari operasi dalam bentuk output dataset, seringkali disebut juga data turunan.
 
@@ -16,7 +16,7 @@ Dengan kata lain, ektraksi atau pengubahan informasi seperti yang Anda harapkan 
 
 <!-- ### Buffer -->
 
-### Penapisan data
+#### Penapisan data
 
 Kawasan lindung (taman nasional, suaga margasatwa dan hutan lindung) direncanakan dan dikelola dengan tujuan utama untuk konservasi biodiversitas. Hampir semua kawasan lindung terpapar interaksi dengan manusia, baik di dalam ataupun di luar kawasan. Hal ini akan berpengaruh terhadap hidupan liar dan habitatnya. Oleh karena itu, pertumbuhan populasi merupakan salah satu masalah utama dalam pengelolaan kawasan lindung. Hal tersebut akan memicu perubahan tutupan lahan dan penggunaan lahan, yang berdampak pada semakin tingginya tekanan terhadap kawasan lindung.
 
@@ -75,7 +75,7 @@ Untuk mengubah Coordinate Reference System (CRS), klik ikon Globe pada opsi CRS 
 </div>
 
 
-### Dissolve
+#### Dissolve
 
 Satu atau lebih atribut dapat dipilih untuk menggabungkan (merge) geometri yang termasuk ke dalam kelas yang sama, atau semua geometri, dapat digabungkan.
 
@@ -116,7 +116,7 @@ Silakan ikuti langkah berikut untuk menggabungkan poligon berdasarkan atribut:
 <p class="caption">(\#fig:fig1421)Dissolved region</p>
 </div>
 
-### Polygon dari layer extent
+#### Polygon dari layer extent
 
 <!-- # ```{block2, type='rmdcaution'} -->
 <!-- # # The following lesson sometimes failed in QGIS 3. You can try the process in QGIS 3 first and if it is failed, try it in QGIS 2.18 -->
@@ -164,7 +164,7 @@ Ikuti langkah berikut untuk melakukan ekstraksi batas dari poligon:
 
 <!-- ### Rescale  -->
 
-### Reklasifikasi
+#### Reklasifikasi
 
 Fitur ini merupakan salah satu teknik yang bermanfaat untuk mengubah rentang nilai atau mengelompokkannya ke dalam kategori yang baru.
 
@@ -201,11 +201,11 @@ Apabila nilai piksel termasuk ke dalam kelas tertentu, nilai kelas untuk rentang
 
 <!-- ### Zonal statistics -->
 
-## Terrain analyses
+### Terrain analyses
 
 Tipe raster tertentu memungkinkan Anda untuk mendapatkan informasi yang lebih terkait terrain. Biasanya Digital Elevation Models (DEMs) digunakan untuk keperluan ini. 
 
-### Persiapan
+#### Persiapan
 
 1. Buka __srtm_58_09.tif__ (ada di dalam sub folder TIF). Layer ini merupakan DEM dengan 
 EPSG:4326 CRS dan ketinggian dalam kaki (feet). Karakteristik ini tidak cocok untuk algoritma terrain analyses, harus dikonversi terlebih dahulu ke dalam proyeksi meter (Universal Transverse Mercator).
@@ -225,7 +225,7 @@ Oleh karena itu, tahapan yang perlu dilakukan adalah mengekspor layer dan mendef
 <p class="caption">(\#fig:fig1471)Save raster layer as</p>
 </div>
 
-### Kelerengan
+#### Kelerengan
 
 Kelerengan (**Slope**) merupakan salah satu parameter dasar yang dapat diturunkan dari DEM.
 Ia adalah turunan pertama dari DEM dan menggambarkan laju perubahan ketinggian. **Slope** dihitung dengan melakukan analisis ketinggian dari setiap piksel, membandingkannya dengan ketinggian piksel di sekelilingnya. Untuk menghitungnya di QGIS, silakan ikuti cara berikut : 
@@ -241,7 +241,7 @@ Ia adalah turunan pertama dari DEM dan menggambarkan laju perubahan ketinggian. 
 
 3. Klik **Run** untuk menjalankan prosesnya.
 
-### Hillshade
+#### Hillshade
 
 Layer **hillshade** umumnya digunakan untuk memperbagus tampilan peta dan topografi yang intuitif, dengan mensimulasikan sumber cahaya dan bayangan yang dibentuk oleh permukaan bumi. **Hillshade** dapat dihitung dengan cara sebagai berikut :
 
@@ -257,13 +257,13 @@ Layer **hillshade** umumnya digunakan untuk memperbagus tampilan peta dan topogr
 
 3. Klik **Run** untuk menjalankan algoritmanya.
 
-## Density Analyses (Analisis Kepadatan)
+### Density Analyses (Analisis Kepadatan)
 
 Seringkali kita harus bekerja dengan data besar dan padat fiturnya, yang membuat penampilan datanya lambat. Jumlahnya yang ribuan atau bahkan jutaan fitur seringkali sulit diinterpretasi, terjadi overlap antar fitur yang menyebabkan pendeteksian pola cluster atau distribusinya tidak mudah untuk dilakukan.   
 
 Pada bagian ini, kita akan belajar mengenai teknik yang memungkinkan visualisasi dataset semacam itu dengan bentuk yang lebih mudah dibaca dan dengan waktu pemuatan (**loading**) yang lebih cepat. Setelah melakukan praktek di bagian ini, Anda diharapkan mampu melakukan analisis kepadatan (**density analyses**) untuk data yang Anda miliki dan mengekstrak informasi dari peta kepadatan.
 
-### Konsep 
+#### Konsep 
 
 Peta kepadatan memungkinkan estimasi visual konsentrasi objek atau peristiwa di area studi. Peta seperti itu sangat berguna untuk penilaian pola distribusi fitur di wilayah studi. Ketika kita cukup menambahkan lokasi fitur atau peristiwa (misalnya, sebagai titik) ke peta, kita tidak dapat melihat perubahan konsentrasi mereka di area yang berbeda. Analisis kepadatan memberi kita fungsionalitas seperti itu dengan menggunakan karakteristik area yang seragam, seperti jumlah fitur per hektar atau kilometer persegi.
 
@@ -287,7 +287,7 @@ Diagram ini menunjukkan prinsip umum pembuatan **_heat map_**. Titik-titik hijau
 
 Ini adalah pendekatan paling sederhana. Dalam aplikasi dunia nyata, algoritma yang lebih kompleks digunakan, di mana setiap titik memiliki dampak pada nilai-nilai piksel tetangga, tergantung pada jaraknya dari piksel-piksel tersebut.
 
-### Membuat Heatmap dengan plugin QGIS
+#### Membuat Heatmap dengan plugin QGIS
 
 Dengan bantuan plugin inti QGIS yang disebut **Heatmap**, kita dapat dengan mudah membuat **heat map** dari data titik vektor dan menggunakannya untuk analisis lebih lanjut. Pertama, kita perlu mengaktifkan plugin ini, jika belum diaktifkan. Setelah aktivasi, ia membuat submenu di bawah menu Raster dan menempatkan tombolnya pada bilah alat Raster .
 
@@ -585,7 +585,7 @@ Kontur yang lebih padat sesuai dengan perubahan kepadatan yang lebih intens. Sel
 
 <!-- The result looks great, but performing all of these steps manually is not very comfortable. Also, there are a number of intermediate layers that can, and should, be removed. Fortunately, QGIS allows us to automate such operations with the Processing Graphical Modeler. Refer to Chapter 8, Automating Analysis with Processing Models, to learn how to create models and use them. -->
 
-## Analisis kesesuaian
+### Analisis kesesuaian
 
 Kita hidup di dunia yang penuh dengan berbagai hubungan yang dapat dianalisis dalam konteks fungsional, temporal, atau spasial. Hubungan spasial merupakan hal yang sangat menarik di bidang GIS, karena di sini objek ruang direpresentasikan dengan cara yang membantu penjelasan serta memperlihatkan hubungan geografis mereka. Analisis kesesuaian adalah bagian mendasar dari analisis GIS yang menjawab pertanyaan, "Di mana tempat terbaik untuk menempatkan fasilitas baru?" Dalam bab ini, kita akan dihadapkan pada dasar-dasar analisis kesesuaian melalui pencarian tempat terbaik untuk tempat tinggal. Kita akan belajar cara:
 
@@ -755,7 +755,7 @@ Tempat diberi peringkat dari yang paling tidak sesuai hingga yang paling sesuai 
 
 Ini serupa dengan jenis penilaian sebelumnya dan hanya memiliki satu perbedaan signifikan: berbagai faktor dapat diberi bobot berbeda sesuai dengan kepentingannya untuk jenis kegiatan tertentu. Jenis penilaian ini bergantung pada pendekatan aljabar raster dan dianggap inklusif, tetapi bukan tanpa subjektivitas, terutama ketika menyangkut faktor pembobotan dan menafsirkan hasil akhir.
 
-### Tahap 1: Mendefinisikan maksud dan tujuan
+#### Tahap 1: Mendefinisikan maksud dan tujuan
 
 Sepanjang tutorial ini, kita akan menganggap bahwa kita bekerja untuk satu pasangan muda dengan anak kecil. Mereka mencari tempat yang sempurna untuk tinggal di wilayah tertentu yang menarik perhatian mereka. Tujuan kita adalah menggunakan kekuatan metode analisis kesesuaian berbasis GIS dan memberikan jawaban yang objektif dan dapat diandalkan untuk pertanyaan mereka.
 
@@ -775,11 +775,11 @@ Tujuan dari analisis ini adalah untuk menemukan area yang cocok untuk keluarga m
 
 Sekarang setelah tujuan dan persyaratan utama telah diklarifikasi, kita dapat melanjutkan ke langkah berikutnya dan mempelajari semua data yang tersedia untuk menilai relevansinya dengan contoh kita.
 
-### Tahap 2 : Analisis ketersediaan data dan definisikan relevansi
+#### Tahap 2 : Analisis ketersediaan data dan definisikan relevansi
 
 Segera setelah kita menetapkan persyaratan dasar, kita perlu melakukan eksplorasi data yang mungkin untuk digunakan dan relevan untuk analisis. Dataset pelatihan berisi sejumlah besar dataset, dan yang paling relevan di antaranya tercantum dalam daftar berikut:
 
-#### Keselamatan
+##### Keselamatan
 
 - Layer *hurricane_evacuation_zones* : 
 
@@ -793,13 +793,13 @@ Zona genangan badai adalah area genangan badai terburuk.
 
 Raster yang dibuat di bagian membuat *Heat map*, yang menunjukkan kepadatan spasial pengaduan kebisingan yang terdaftar mungkin berguna untuk penilaian potensial untuk keselamatan publik.
 
-#### Konektivitas
+##### Konektivitas
 
 - Layer subway_entrances :
 
 Lokasi pintu masuk kereta bawah tanah.
 
-#### Greenness dan openness
+##### Greenness dan openness
 
 - Layer parks :
 
@@ -811,13 +811,13 @@ Ini adalah layer raster yang dibuat dari data sensus pohon.
 
 
 
-#### Educational potential
+##### Educational potential
 
 - Layer elementary_schools :
 
 Ini adalah lokasi titik sekolah berdasarkan alamat resmi. Lapisan ini mencakup beberapa informasi dasar tentang sekolah, seperti nama, alamat, jenis, dan informasi kontak kepala sekolah.
 
-#### Active rest opportunities
+##### Active rest opportunities
 
 - Layer bike_routes : 
 
@@ -828,14 +828,14 @@ Lokasi jalur sepeda dan rute di seluruh kota.
 Lapisan ini berisi fasilitas atletik dan beberapa informasi dasar tentangnya, termasuk jenis olahraga utama, permukaan, dimensi, dan sebagainya.
 
 
-#### Cultural life
+##### Cultural life
  
 - Layer musemart :
 
 Lokasi museum dan galeri seni.
 
 
-### Tahap 3 : Definisikan kriteria analisis 
+#### Tahap 3 : Definisikan kriteria analisis 
 
 Pada layer *hurricane_evacuation_zones*, ada enam zona, yang diperingkat dalam zona bidang atribut berdasarkan risiko dampak gelombang badai, dengan zona 1 menjadi wilayah yang kemungkinan besar akan banjir. Jika terjadi badai atau badai tropis, penghuni di zona ini harus mengungsi. Daerah dengan nilai zona X tidak berada dalam zona evakuasi. Area dengan nilai zona 0 adalah salah satu dari yang berikut: air, dermaga kecil, atau pulau-pulau tak berpenghuni. Untuk keperluan analisis, lapisan ini harus dirasterisasi dan diberi peringkat sesuai dengan risiko dampak badai, dengan nilai peringkat turun dari area yang tidak berada dalam zona evakuasi ke yang paling mungkin terkena banjir.
 
@@ -846,7 +846,7 @@ Layer raster *noise_heatmap* adalah raster yang harus diberi peringkat menggunak
 Lapisan yang dipilih lainnya harus dianalisis terlebih dahulu untuk kedekatannya. Untuk tujuan ini, pertama-tama kita akan merasterisasi mereka, kemudian membuat *continuous raster proximity*, dan akhirnya peringkat mereka di bawah beberapa kategori sesuai dengan nilai *proximity* (semakin dekat suatu objek, semakin tinggi nilai kesesuaian). Sekali lagi, dalam hal peringkat pengguna, kita tidak akan dapat menghindari beberapa subjektivitas dalam penilaian kita. Selain itu, raster kedekatan akhir dapat ditimbang menurut kepentingannya dalam penilaian kesesuaian keseluruhan.
 
 
-### Tahap 4 : Analisis dan persiapan data
+#### Tahap 4 : Analisis dan persiapan data
 
 Ada tiga pendekatan utama untuk analisis data primer. Ini tergantung pada tipe data awal dan atribut yang tersedia:
 
@@ -866,7 +866,7 @@ Perhatikan bahwa untuk hasil akhir, kita akan selalu memiliki peringkat raster n
 
 Di bagian mendatang, kita akan melalui alur kerja yang disebutkan sebelumnya untuk contoh lapisan raster. Segera setelah Anda memahami prinsipnya, Anda akan dapat menyiapkan lapisan lain secara mandiri.
 
-#### Rasterisasi dan pemeringkatan layer vektor kategori###
+##### Rasterisasi dan pemeringkatan layer vektor kategori###
 
 Dalam contoh ini, kita akan mengerjakan lapisan hurricane_evacuation_zones. Atribut yang sangat kita minati adalah zona, yang menggambarkan daerah diprioritaskan untuk evakuasi. Daerah dengan nilai terendah, 1, kemungkinan besar akan dievakuasi, dan sebaliknya. Dalam hal ini, kita dapat menggunakan nilai-nilai ini secara langsung untuk memberi peringkat raster.
 
@@ -927,7 +927,7 @@ gdal_rasterize -a category -l hurricane_inundation_zones -a_nodata 0 -te 982199.
 
 Ketika dikombinasikan, lapisan-lapisan ini dapat memberikan penilaian kumulatif kesesuaian berdasarkan keparahan risiko dari bahaya alam.
 
-#### Mengurutkan raster kepadatan
+##### Mengurutkan raster kepadatan
 
 Dalam kasus raster kepadatan, kita dapat menggunakan peta noise_heatamp.tif dan membuat layer tree_density.tif sendiri. Pertama, kita akan menyiapkan noise_heatmap.tif yang awalnya jauh lebih besar daripada bidang minat yang kita kerjakan dalam bab ini. Untuk klip layer raster, gunakan menu berikut **Raster | Extraction | Clipper** :
 
@@ -993,7 +993,7 @@ Perhatikan hal ini: karena peringkat, peta panas terbalik; yaitu, hotspot paling
 
 Dengan cara yang sama, kita dapat membuat dan memberi peringkat peta panas untuk objek titik lain yang menarik dalam analisis kesesuaian kita, yaitu pohon dan museumart .
 
-#### Pembuatan dan pengurutan proximity rasters
+##### Pembuatan dan pengurutan proximity rasters
 
 Alur kerja akan dijelaskan dalam contoh lapisan vektor titik subway_entrances:
 
@@ -1049,7 +1049,7 @@ Di tangkapan layar berikut, Anda dapat melihat seperti apa raster berkelanjutan 
 
 Dengan cara yang sama, Anda dapat memproses ulang layer vektor lain yang harus dianalisis dari posisi kedekatan, yaitu taman, bike_routes, athletic_facilities, dan sekolah dasar. Sebagai hasilnya, Anda akan memiliki seperangkat lapisan raster yang diberi peringkat dengan beberapa kategori sesuai dengan kedekatan objek yang dipilih. Semakin tinggi pangkat, semakin dekat objek. Sebagai pedoman umum, terapkan nilai 400 m (atau 1300 kaki) untuk memberi peringkat pada raster dengan benar.
 
-### Tahap 5 :  Overlay data dan interpretasi hasil
+#### Tahap 5 :  Overlay data dan interpretasi hasil
 
 Sekarang kita memiliki segalanya siap untuk menutupi raster dan menghasilkan penilaian kesesuaian kumulatif. Pada gambar berikut, Anda dapat melihat daftar lengkap lapisan, ditimbang oleh kepentingannya untuk kesesuaian umum. Bobot adalah koefisien sederhana dalam kisaran 0 hingga 1, dan mereka digunakan untuk memodifikasi peringkat dengan benar.
 
